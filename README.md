@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Area of Interest (AOI) Tile Viewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Problem Statement
 
-## Available Scripts
+You have been tasked with creating a user-friendly dashboard that allows users to draw an Area of Interest (AOI) on a map and view the intersecting tiles based on the intersection of the AOI. The primary goal is to provide an intuitive interface for users to select an area and visualize the corresponding tiles.
 
-In the project directory, you can run:
+## Solution Overview
 
-### `npm start`
+This codebase provides a solution to the above problem using React and Leaflet, a popular JavaScript library for interactive maps. The user interface allows users to draw a custom AOI on the map, and the system will display the tiles that intersect with the drawn AOI.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Codebase Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `Maps.module.css`: Styling for the components.
+- `Maps.js`: The main React component that implements the map and interaction logic.
 
-### `npm test`
+## Implementation Details
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- The codebase utilizes Leaflet and React to create an interactive map.
+- Users can draw an AOI on the map using the provided drawing tools.
+- The drawn AOI is converted to a polygon and used to determine intersecting tiles.
+- The tile data is provided in the `geoData.json` file.
+- Intersecting tiles are displayed on the map in red color.
+- The map center is set to the latitude and longitude provided.
+- The codebase uses `turf.js` for geometric calculations.
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository to your local machine.
+2. Open a terminal and navigate to the project directory.
+3. Install the required dependencies using `npm install`.
+4. Replace the `latitude` and `longitude` variables with your desired map center coordinates in `Maps.js`.
+5. Start the development server using `npm start`.
+6. Open your web browser and go to `http://localhost:3000` to see the AOI Tile Viewer in action.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- react-leaflet
+- leaflet
+- leaflet-draw
+- @turf/turf
 
-### `npm run eject`
+## Notes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Ensure you have Node.js and npm installed on your system.
+- The codebase uses Leaflet and other libraries, so make sure to familiarize yourself with their documentation if needed.
+- The solution is focused on the frontend implementation; the backend integration and deployment are not covered in this codebase.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to explore and modify the codebase to suit your needs. Happy coding!
